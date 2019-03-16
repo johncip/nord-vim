@@ -16,7 +16,7 @@ let g:colors_name = "nord"
 let s:nord_vim_version="0.9.0"
 set background=dark
 
-let s:nord0_gui = "#2E3440"
+let s:nord0_gui = "#282A36"
 let s:nord1_gui = "#3B4252"
 let s:nord2_gui = "#434C5E"
 let s:nord3_gui = "#4C566A"
@@ -167,6 +167,11 @@ call s:hi("healthError", s:nord11_gui, s:nord1_gui, s:nord11_term, s:nord1_term,
 call s:hi("healthSuccess", s:nord14_gui, s:nord1_gui, s:nord14_term, s:nord1_term, "", "")
 call s:hi("healthWarning", s:nord13_gui, s:nord1_gui, s:nord13_term, s:nord1_term, "", "")
 call s:hi("TermCursorNC", "", s:nord1_gui, "", s:nord1_term, "", "")
+
+"+- Vim 8 Terminal Colors -+
+if has('terminal')
+  let g:terminal_ansi_colors = [s:nord1_gui, s:nord11_gui, s:nord14_gui, s:nord13_gui, s:nord9_gui, s:nord15_gui, s:nord8_gui, s:nord5_gui, s:nord3_gui, s:nord11_gui, s:nord14_gui, s:nord13_gui, s:nord9_gui, s:nord15_gui, s:nord7_gui, s:nord6_gui]
+endif
 
 "+- Neovim Terminal Colors -+
 if has('nvim')
